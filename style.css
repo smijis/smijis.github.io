@@ -1,5 +1,5 @@
 /* Base HTML Styles */
-@import url("https://fonts.googleapis.com/css2?family=Momo+Signature&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Momo+Signature&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   --brand: #1d1c61;
   --action: #69bcf3;
@@ -14,7 +14,7 @@
 html {
    box-sizing: border-box;
    font-size: 16px;
-   font-family: "Calibri", sans-serif;
+   font-family: "Montserrat", sans-serif;
    color: var(--black);
    scroll-behavior: smooth;
 }
@@ -38,21 +38,37 @@ h6,
 p,
 ol,
 ul {
-  margin: 10px;
-  padding: 10px;
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 10px;
 }
 
 ol,
 ul {
   list-style: none;
-}
+  display: flex;
+  padding: 14px 16px;
+  gap: 20px;
+  }
+
+  ul li a {
+    color: var(--brand)
+  }
+
+  ul li a:hover {
+    color: var(--action);
+  }
+
+  a {    
+    text-decoration: none;
+  }
 
 /* mobile layout - ALWAYS DO FIRST */
 #container {
   display: flex;
   justify-content: center;  /* center horizontally */
   align-items: center;      /* center vertically */
-  min height: 100vh;        /* full page height */
+  min-height: 70vh;        /* full viewport height */
   padding: 20px;            /* spacing around content */
   box-sizing: border-box;   /* include padding in width */
   flex-direction: column;   /* stacks items vertically on small screens */
@@ -62,7 +78,7 @@ ul {
 
 .profile {
   display: flex;
-  flex-direction; column;
+  flex-direction: column;
   align-items: center;
   gap: 20px;
 }
@@ -77,22 +93,25 @@ ul {
 .hero h1 {
   font-size: 8vw;
   margin: 0;
-  max-font-size: 60px;
 }
 
 .bio {
-  margin: 10px 0 0 0;
-  font-size 4vw;
-  max-font-size: 18px;
+  margin: 20px 100px 20px 100px;
+  font-size: 3vw;
+}
+
+.navigation {
+  float: right;
+  padding: 10px;
 }
 
 /* desktop layout */
 @media (min-width: 768px) {
   #container {
     flex-direction: row;    /* side by side on desktop */
-    text-align: left;       /* left-align text */
+    text-align: left;       /* left-align text */  
+    gap: 60px;
   }
-}
 
 .profile-photo img {
   width: 400px;           /* size of photo */
@@ -113,5 +132,7 @@ ul {
 
 .bio {
   font-size: 16px;
-  padding: 10px 80px 50px 80px;
+  padding: 10px 100px 50px 100px;
+  max-width: 70vw;
+}
 }
