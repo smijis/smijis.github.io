@@ -97,7 +97,7 @@ ul {
 }
 
 .navigation a:hover {
-  color: var(--action); /* hover color */
+  color: var(--action); /* hover color test */
 }
 
 /* Homepage Section */
