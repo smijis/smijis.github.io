@@ -1,8 +1,8 @@
 /* Base HTML Styles */
-@import url("https://fonts.googleapis.com/css2?family=Momo+Signature&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Momo+Signature&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   --brand: #1d1c61;
-  --action: #69bcf3;
+  --action: #b8e7f4;
   --white: #ffffff;
   --base-light: #a3ccff;
   --base-dark: #0d0711;
@@ -10,6 +10,12 @@
 }
 
  /* CSS Reset */
+
+ *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 html {
    box-sizing: border-box;
@@ -37,13 +43,16 @@ h6,
 p,
 ol,
 ul {
-  margin: 0px;
   padding: 0px;
   margin-bottom: 10px;
 }
 
 h1 {
   margin: 30px;
+}
+
+.center-h1 {
+  text-align: center;
 }
 
 ol,
@@ -71,23 +80,23 @@ ul {
 ========================= */
 
 .header {
-  display: flex; /* puts items (logo + nav) in a row */
+  display: flex; /* puts items (logo + nav) next to each other in a row */
   justify-content: space-between; /* pushes them to opposite sides */
-  align-items: center; /* vertically centers items in header */
+  align-items: center; /* vertically centers items on the cross-axis */
   padding: 10px; 
 }
 
 .logo {
   width: 100px;
-  padding: 30px 20px 20px 20px;
+  padding: 25px 20px 20px 15px;
 }
 
-.navigation ul { /* for the nav list container */
+.navigation ul { /* for the container that the nav links are inside of */
   list-style: none;
   display: flex; /* puts nav links in a row */
-  gap: 20px;
+  gap: 10px;
   margin: 0; /* removes browser default margin */
-  padding: 0px 20px 0px 0px;
+  padding: 0px 15px 0px 0px;
 }
 
 .navigation a { /* for the links inside the nav */
@@ -96,64 +105,98 @@ ul {
   font-weight: 500;
 }
 
-.navigation a:hover {
-  color: var(--action); /* hover color */
-}
-
-/* Homepage Section */
+/* Home Page */
 
 #container { /* profile photo + hero container */
   display: flex;
-  flex-direction: column;   /* stacks items vertically on mobile */
+  flex-direction: column;   /* stacks photo and writing (child items) vertically on top of each other */
   justify-content: center;  /* center vertically */
   align-items: center;      /* center horizontally */
-  min-height: 40vh;        /* full viewport height */
-  padding: 0px;            /* spacing around content */
-  box-sizing: border-box;   /* include padding in width */
+  min-height: 40vh;        /* sets the minimum height of the container to 40% of browser window */
+  padding: 0px;
   text-align: center;       /* center text for mobile */
   gap: 20px;                /* space between photo and text (child items) */
     }
 
 .profile-photo img {
-  width: 50vw;
-  max-width: 300px;
-  height: auto;
-  border-radius: 50%;
+  width: 50vw; /* (vw = viwerport width) 50% of the width of the browser window */
+  max-width: 300px; /* image will never exceed 300px */
+  height: auto; /* keeps image proportions same and calculates height as width changes */
+  border-radius: 50%; /* corners are rounded */
 }
 
 .hero h1 {
-  font-size: 8vw;
+  font-size: 8vw; /* 8% of the width of the browser window */
 }
 
 .bio {
   margin: 8px 70px 50px 70px;
-  font-size: 4vw;
+  font-size: 4vw; /* 4% of the width of the browser window */
 }
 
-/* Projects Section */
-
-#container-projects
-{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-}
+/* Projects Page */
 
 .project-image
 {
-  width: 80%;                 /* responsive width for mobile */
-  max-width: 600px;           /* prevents being too large on bigger screens */
-  height: auto;       
+  display: block; /* block-level element: all content starts on a new line and takes up full width */
+  text-align: center;
+  margin: auto;
+  width: 80%; /* 80% of the container's size. Different to vw */
+  max-width: 600px; /* prevents it being larger than 600px */
+  height: auto; /* keeps image proportions same and calculates height as width changes */    
 }
 
+/* Contact Page */
+
+footer
+{
+ display: flex;
+ justify-content: center;
+ align-items: center; 
+ gap: 10px;
+ padding: 40px;
+}
+
+.socials-icon
+{
+  width: 50px;                          
+  height: 50px;
+}
+
+form
+{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  max-width: 400px;
+}
+
+/* Empty Page */
+
+.img-construction img
+{
+  max-width: 100%;
+  height: auto;
+  padding: 20px;
+}
+
+.empty-page-writing
+{
+  text-align: center;
+  font-size: 18px;
+  margin: 0;
+}
 
 /* =========================
    Desktop layout
 ========================= */
 @media (min-width: 768px) {
+
+  .navigation a:hover {
+    color: var(--action); /* hover color */
+  }
+
   #container {
     flex-direction: row;    /* side by side on desktop */
     text-align: left;       /* left-align text */  
@@ -183,7 +226,7 @@ ul {
   max-width: 70vw;
 }
 
-#container-projects
+#container-projects a
 {
   display: flex;
   flex-direction: column;
@@ -191,4 +234,14 @@ ul {
   gap: 20px;
   padding: 20px;
 }
+
+.project-image
+{
+  transition: filter 0.2s ease;
+}
+
+.project-image:hover {
+  filter: brightness(70%);
+}
+
 }
