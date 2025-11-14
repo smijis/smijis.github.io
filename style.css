@@ -115,7 +115,7 @@ ul {
   min-height: 40vh;        /* sets the minimum height of the container to 40% of browser window */
   padding: 0px;
   text-align: center;       /* center text for mobile */
-  gap: 20px;                /* space between photo and text (child items) */
+  gap: 10px;                /* space between photo and text (child items) */
     }
 
 .profile-photo img {
@@ -130,7 +130,7 @@ ul {
 }
 
 .bio {
-  margin: 8px 70px 50px 70px;
+  margin: 0px 70px 50px 70px;
   font-size: 4vw; /* 4% of the width of the browser window */
 }
 
@@ -163,13 +163,12 @@ footer
   height: 50px;
 }
 
-form
+.form
 {
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 20px;
-  max-width: 400px;
 }
 
 /* Empty Page */
@@ -193,27 +192,34 @@ form
 ========================= */
 @media (min-width: 768px) {
 
+  .navigation ul { /* for the container that the nav links are inside of */
+    gap: 20px;
+  }
+  
   .navigation a:hover {
     color: var(--action); /* hover color */
+    text-decoration: underline wavy var(--action);
   }
+
+  .logo {
+    width: 150px;
+    padding: 25px 20px 20px 15px;
+  }
+
+  /* Home Page */
 
   #container {
     flex-direction: row;    /* side by side on desktop */
     text-align: left;       /* left-align text */  
     gap: 60px;
+    padding: 15px 0px 0px 0px;
   }
 
 .profile-photo img {
-  width: 400px;           /* size of photo */
-  height: 400px;
+  width: 350px;           /* size of photo */
+  height: 350px;
   object-fit: cover;      /* keep image proportions */
   border-radius: 50%;     /* makes it circular */
-}
-
-.profile {
-  flex-direction: row;
-  align-items: center;
-  gap: 40px;
 }
 
 .hero h1 {
@@ -221,27 +227,42 @@ form
 }
 
 .bio {
+  text-align: center;
   font-size: 16px;
-  padding: 10px 100px 50px 100px;
-  max-width: 70vw;
+  padding: 20px 100px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-#container-projects a
+/* Projects Page */
+
+#projects
 {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .project-image
 {
-  transition: filter 0.2s ease;
+  width: 500px; /* fixed size on desktop */
+  transition: filter 0.3s ease;
 }
 
 .project-image:hover {
   filter: brightness(70%);
+}
+
+/* Contact Page */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 400px;
+  gap: 10px;
+
 }
 
 }
