@@ -8,6 +8,7 @@
   </head>
 
   <body>
+    <div class="background-gif">
     <header class="header">
         <img src="./img/logo.png" alt="My Portfolio Logo" class="logo" />
       <nav class="navigation" aria-label="Primary">
@@ -19,7 +20,7 @@
             <a href="projects.html">Projects</a>
           </li>
           <li>
-            <a href="contact.html">Contact</a>
+            <a href="contact.html" class="active">Contact</a>
           </li>
         </ul>
       </nav>
@@ -27,12 +28,12 @@
 <section class="contact-form">
   <h1 class="center-h1">Get in touch</h1>
   <div class="form">
-    <label for="your-name">Your Name</label>
+    <label for="your-name">Name</label>
     <input type="text" id="your-name" name="your-name" required />
-    <label for="your-email">Your Email</label>
+    <label for="your-email">Email</label>
     <input type="text" id="your-email" name="your-email" required />
-    <label for="message">Your Message</label>
-    <textarea name="message-text" id="message" rows="10" required></textarea>
+    <label for="message">Message</label>
+    <textarea name="message-text" id="message" rows="8" required></textarea>
     <input type="submit" value="Submit" />
   </div>
 </section>

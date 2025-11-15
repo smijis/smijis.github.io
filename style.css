@@ -1,7 +1,7 @@
 /* Base HTML Styles */
 @import url("https://fonts.googleapis.com/css2?family=Momo+Signature&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
-  --brand: #1d1c61;
+  --brand: #0d0711;
   --action: #b8e7f4;
   --white: #ffffff;
   --base-light: #a3ccff;
@@ -9,20 +9,30 @@
   --black: #111111;
 }
 
- /* CSS Reset */
+/* CSS Reset */
 
- *,
+.background-gif {
+  background-image: url("./img/sky.gif"); /* Replace with your GIF's path */
+  background-size: cover;
+  background-repeat: repeat; /* Prevents the GIF from repeating */
+  background-position: center; /* Centers the GIF within the element */
+  height: 100vh; /* Example: make the div take full viewport height */
+  margin: 0;
+  transition: background-position 2s ease-in-out;
+}
+
+*,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
 html {
-   box-sizing: border-box;
-   font-size: 16px;
-   font-family: "Montserrat", sans-serif;
-   color: var(--black);
-   scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  color: var(--black);
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -47,12 +57,17 @@ ul {
   margin-bottom: 10px;
 }
 
+p {
+  line-height: 1.5;
+}
+
 h1 {
-  margin: 30px;
+  margin: 10px;
 }
 
 .center-h1 {
   text-align: center;
+  font-size: 40px;
 }
 
 ol,
@@ -61,19 +76,12 @@ ul {
   display: flex;
   padding: 20px;
   gap: 20px;
-  }
+}
 
-  ul li a {
-    color: var(--brand);
-  }
-
-  ul li a:hover {
-    color: var(--action);
-  }
-
-  a {    
-    text-decoration: none;
-  }
+ul li a {
+  color: var(--brand);
+  text-decoration: none;
+}
 
 /* =========================
    Mobile-first layout
@@ -83,15 +91,16 @@ ul {
   display: flex; /* puts items (logo + nav) next to each other in a row */
   justify-content: space-between; /* pushes them to opposite sides */
   align-items: center; /* vertically centers items on the cross-axis */
-  padding: 10px; 
+  padding: 10px 20px 5px 5px;
 }
 
 .logo {
   width: 100px;
-  padding: 25px 20px 20px 15px;
+  padding: 28px 20px 20px 15px;
 }
 
-.navigation ul { /* for the container that the nav links are inside of */
+.navigation ul {
+  /* for the container that the nav links are inside of */
   list-style: none;
   display: flex; /* puts nav links in a row */
   gap: 10px;
@@ -99,24 +108,31 @@ ul {
   padding: 0px 15px 0px 0px;
 }
 
-.navigation a { /* for the links inside the nav */
+.navigation a {
+  /* for the links inside the nav */
   color: var(--brand);
   text-decoration: none;
   font-weight: 500;
 }
 
+.navigation a.active {
+  color: var(--action);
+  font-weight: bold;
+}
+
 /* Home Page */
 
-#container { /* profile photo + hero container */
+#container {
+  /* profile photo + hero container */
   display: flex;
-  flex-direction: column;   /* stacks photo and writing (child items) vertically on top of each other */
-  justify-content: center;  /* center vertically */
-  align-items: center;      /* center horizontally */
-  min-height: 40vh;        /* sets the minimum height of the container to 40% of browser window */
+  flex-direction: column; /* stacks photo and writing (child items) vertically on top of each other */
+  justify-content: center; /* center vertically */
+  align-items: center; /* center horizontally */
+  min-height: 40vh; /* sets the minimum height of the container to 40% of browser window */
   padding: 0px;
-  text-align: center;       /* center text for mobile */
-  gap: 10px;                /* space between photo and text (child items) */
-    }
+  text-align: center; /* center text for mobile */
+  gap: 10px; /* space between photo and text (child items) */
+}
 
 .profile-photo img {
   width: 50vw; /* (vw = viwerport width) 50% of the width of the browser window */
@@ -136,52 +152,54 @@ ul {
 
 /* Projects Page */
 
-.project-image
-{
+#projects a {
+  display: flex;
+  justify-content: center;
+}
+
+.project-image {
   display: block; /* block-level element: all content starts on a new line and takes up full width */
   text-align: center;
-  margin: auto;
+  margin: 0px;
   width: 80%; /* 80% of the container's size. Different to vw */
   max-width: 600px; /* prevents it being larger than 600px */
-  height: auto; /* keeps image proportions same and calculates height as width changes */    
+  height: auto; /* keeps image proportions same and calculates height as width changes */
 }
 
 /* Contact Page */
 
-footer
-{
- display: flex;
- justify-content: center;
- align-items: center; 
- gap: 10px;
- padding: 40px;
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
 }
 
-.socials-icon
-{
-  width: 50px;                          
+.socials-icon {
+  width: 50px;
   height: 50px;
 }
 
-.form
-{
+.form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 10px;
-  padding: 20px;
+  padding: 10px 40px;
 }
 
 /* Empty Page */
 
-.img-construction img
-{
+.img-construction img {
+  display: block;
   max-width: 100%;
   height: auto;
   padding: 20px;
+  margin: auto;
 }
 
-.empty-page-writing
-{
+.empty-page-writing {
   text-align: center;
   font-size: 18px;
   margin: 0;
@@ -191,14 +209,19 @@ footer
    Desktop layout
 ========================= */
 @media (min-width: 768px) {
-
-  .navigation ul { /* for the container that the nav links are inside of */
+  .navigation ul {
+    /* for the container that the nav links are inside of */
     gap: 20px;
   }
-  
+
   .navigation a:hover {
     color: var(--action); /* hover color */
     text-decoration: underline wavy var(--action);
+  }
+
+  .navigation a.active {
+    color: var(--action);
+    font-weight: bold;
   }
 
   .logo {
@@ -208,61 +231,112 @@ footer
 
   /* Home Page */
 
-  #container {
-    flex-direction: row;    /* side by side on desktop */
-    text-align: left;       /* left-align text */  
-    gap: 60px;
-    padding: 15px 0px 0px 0px;
+  @keyframes animation {
+    0% {
+      transform: translateY(-5%);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-5%);
+      opacity: 1;
+    }
   }
 
-.profile-photo img {
-  width: 350px;           /* size of photo */
-  height: 350px;
-  object-fit: cover;      /* keep image proportions */
-  border-radius: 50%;     /* makes it circular */
-}
+  #container {
+    flex-direction: row; /* side by side on desktop */
+    text-align: left; /* left-align text */
+    gap: 60px;
+    padding: 15px 0px 0px 0px;
+    animation-name: animation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-fill-mode: none;
+  }
 
-.hero h1 {
-  font-size: 40px;
-}
+  .profile-photo img {
+    width: 300px; /* size of photo */
+    height: 300px;
+    object-fit: cover; /* keep image proportions */
+    border-radius: 50%; /* makes it circular */
+  }
 
-.bio {
-  text-align: center;
-  font-size: 16px;
-  padding: 20px 100px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
+  .hero h1 {
+    font-size: 40px;
+  }
 
-/* Projects Page */
+  .bio {
+    text-align: center;
+    font-size: 16px;
+    padding: 20px 100px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 
-#projects
-{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+  /* Projects Page */
 
-.project-image
-{
-  width: 500px; /* fixed size on desktop */
-  transition: filter 0.3s ease;
-}
+  #projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-.project-image:hover {
-  filter: brightness(70%);
-}
+  .project-image {
+    width: 500px; /* fixed size on desktop */
+    transition: filter 0.3s ease;
+  }
 
-/* Contact Page */
+  .project-image:hover {
+    filter: brightness(70%);
+  }
 
-.form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0px 400px;
-  gap: 10px;
+  /* Contact Page */
 
-}
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 420px;
+    margin: 20px auto;
+    gap: 10px;
+  }
 
+  .form label {
+    font-weight: 200px;
+    color: var(--brand);
+  }
+
+  .form input[type="text"],
+  .form textarea {
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    outline-color: #b8e7f4;
+  }
+
+  .form input[type="submit"] {
+    padding: 8px;
+    border: none;
+    background-color: #b8e7f4;
+    color: white;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+  }
+
+  .form input[type="submit"]:hover {
+    background-color: var(--brand);
+  }
 }
