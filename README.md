@@ -12,7 +12,7 @@ Add a short paragraph describing the features below. What aesthetic and technica
 
 - ✓ At least one profile picture
 
-  I used object-fit to keep the image in proportion and a border-radius to give it a round border. I also used a container to make it responsive depending on viewport dimensions. This placed profile picture next to my header on the desktop, and the header goes underneath on mobile.
+  I used object-fit to keep the image in proportion and a border-radius to give it a round border. I also used a container to make it responsive depending on viewport dimensions. This placed the profile picture next to the header on the desktop, but on the mobile, the header goes underneath the profile picture.
 
 - ✓ Biography (at least 100 words)
 
@@ -20,7 +20,7 @@ Add a short paragraph describing the features below. What aesthetic and technica
 
 - ✓ Functional Contact Form
 
-  I initially used the <form> tag; however, to center the form on the webpage, I ended up changing it to a container so I could adjust elements to my liking. I also put the contact form on a separate, third web page.
+  I initially used the form html tag; however, to center the form on the webpage, I ended up changing it to a container so I could adjust elements to my liking. I also put the contact form on a separate, third web page.
 
 - ✓ "Projects" section
 
@@ -41,7 +41,7 @@ Add a short paragraph describing the features below. What strategies or design d
 - ✓ Implements responsive design principles.
 - ✓ Uses semantic HTML.
 
-  I created 3 web pages, plus a 4th if you click one of the project image links (but it is not included in the navigation bar) as a temporary fill in for my projects. I focused on responsive design principles, ensuring the layout adjusts well to different screen sizes, including mobile and desktop. I did this by using @media (min-width: 768px) and occasionally "vw" and "max-width". I also used semantic HTML to give structure and meaning to the content. The project is version-controlled with Git as I utilised new branches for each feature and once completed, I deployed onto GitHub, which allowed me to track changes efficiently and make the final edits publicly accessible. The branches I created and used throughout the process have been purposely left on GitHub to demonstrate this.
+  I created 3 web pages, plus a 4th if you click one of the project image links (but it is not included in the navigation bar) as a temporary fill-in for my projects. I focused on responsive design principles, ensuring the layout adjusts well to different screen sizes, including mobile and desktop. I did this by using @media (min-width: 768px) and occasionally "vw" and "max-width". I did not make a separate version for iPad as I was, at this time, okay with the way it looked on those dimensions. I also used semantic HTML to give structure and meaning to the content. The project is version-controlled with Git as I utilised new branches for each feature and once completed, I deployed onto GitHub, which allowed me to track changes efficiently and make the final edits publicly accessible. The branches I created and used throughout the process have been purposely left on GitHub to demonstrate this.
 
 ### Bonus (optional)
 
@@ -52,7 +52,6 @@ Add a short paragraph describing the features below, if you included any.
 I used hover and changed the opacity for the project images which signified that they are clickable links. I also changed the colour of my navigation links and added a squiggle line underneath when one hovers over a link. When active, the navigation links remain bolded and in the "action" colour (i.e. light blue)
 
 - [ ] Include JavaScript to add some dynamic elements to your site. (Extra tricky!)
-      ​
 
 ### Screenshots
 
