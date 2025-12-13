@@ -1,7 +1,7 @@
 # Selina Shin - Portfolio Task
 
 ​
-[My portfolio site](smijis.github.io)
+[My portfolio site](https://smijis.github.io)
 ​
 
 ## Project Requirements
