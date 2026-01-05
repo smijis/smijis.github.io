@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Momo+Signature&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   --brand: #0d0711;
-  --action: #b8e7f4;
+  --action: #66b7ce;
   --white: #ffffff;
   --base-light: #a3ccff;
   --base-dark: #0d0711;
@@ -11,14 +11,14 @@
 
 /* CSS Reset */
 
-.background-gif {
-  background-image: url("./img/sky.gif"); /* Replace with your GIF's path */
-  background-size: cover;
-  background-repeat: repeat; /* Prevents the GIF from repeating */
-  background-position: center; /* Centers the GIF within the element */
-  height: 100vh; /* Example: make the div take full viewport height */
-  margin: 0;
-  transition: background-position 2s ease-in-out;
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 *,
@@ -146,7 +146,7 @@ ul li a {
 }
 
 .bio {
-  margin: 0px 70px 50px 70px;
+  margin: 0px 70px 100px 70px;
   font-size: 4vw; /* 4% of the width of the browser window */
 }
 
@@ -210,7 +210,7 @@ footer {
 .form input[type="submit"] {
   padding: 8px;
   border: none;
-  background-color: #b8e7f4;
+  background-color: var(--action);
   color: white;
   font-size: 1rem;
   border-radius: 8px;
@@ -306,7 +306,7 @@ footer {
   .bio {
     text-align: center;
     font-size: 16px;
-    padding: 20px 100px;
+    padding: 10px 100px 100px 100px;
     max-width: 1000px;
     margin: 0 auto;
   }
@@ -361,7 +361,7 @@ footer {
   .form input[type="submit"] {
     padding: 8px;
     border: none;
-    background-color: #b8e7f4;
+    background-color: var(--action);
     color: white;
     font-size: 1rem;
     border-radius: 8px;
