@@ -53,6 +53,8 @@ I used hover and changed the opacity for the project images which signified that
 
 - [ ] Include JavaScript to add some dynamic elements to your site. (Extra tricky!)
 
+- I also added a moving background which I created through Canva. This took a few revisions - firstly, I created it as a still image and moved the clouds using animation, however, this was not working as I had envisioned. Next I used Canva's presentation software, created two slides, and used the "drift" option. I downloaded this as a gif, however, as it continuously replayed from the beginning, there was a jerking motion as the clouds reset back to the original position. Finally, I downloaded it as a mp4 and made the background a video which only plays once, instead of looping.
+
 ### Screenshots
 
 #### desktop (1440 x 900)
