@@ -2,55 +2,342 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
     <title>Selina Shin</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
   </head>
 
   <body>
-    <video class="background-video" autoplay muted>
+    <!-- Background video -->
+    <video class="background-video" autoplay muted playsinline>
       <source src="./img/clouds.mp4" type="video/mp4" />
     </video>
 
-    <header class="header">
-      <img src="./img/logo.png" alt="My Portfolio Logo" class="logo" />
-      <nav class="navigation" aria-label="Primary">
-        <ul>
-          <li>
-            <a href="index.html" class="active">Home</a>
-          </li>
-          <li>
-            <a href="projects.html">Projects</a>
-          </li>
-          <li>
-            <a href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <div id="container">
-      <div class="profile-photo">
-        <img src="./img/profile photo.jpeg" alt="My Profile Photo" />
+    <!-- ── HERO ── -->
+    <section id="home">
+      <header class="header" id="site-header">
+        <a href="index.html">
+          <img src="./img/logo1.png" alt="My Portfolio Logo" class="logo" />
+        </a>
+        <nav class="navigation" aria-label="Primary">
+          <ul>
+            <li>
+              <a href="#home" class="active"
+                >Home<svg
+                  class="nav-squiggle"
+                  aria-hidden="true"
+                  viewBox="0 0 60 6"
+                >
+                  <path
+                    d="M0 5 Q5 1 10 5 Q15 9 20 5 Q25 1 30 5 Q35 9 40 5 Q45 1 50 5 Q55 9 60 5"
+                  /></svg></a>
+            </li>
+            <li>
+              <a href="#projects"
+                >Projects<svg
+                  class="nav-squiggle"
+                  aria-hidden="true"
+                  viewBox="0 0 60 6"
+                >
+                  <path
+                    d="M0 5 Q5 1 10 5 Q15 9 20 5 Q25 1 30 5 Q35 9 40 5 Q45 1 50 5 Q55 9 60 5"
+                  /></svg></a>
+            </li>
+            <li>
+              <a href="#contact"
+                >Contact<svg
+                  class="nav-squiggle"
+                  aria-hidden="true"
+                  viewBox="0 0 60 6"
+                >
+                  <path
+                    d="M0 5 Q5 1 10 5 Q15 9 20 5 Q25 1 30 5 Q35 9 40 5 Q45 1 50 5 Q55 9 60 5"
+                  /></svg></a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="hero-content">
+        <div class="profile-photo">
+          <img
+            src="./img/profile photo 2.png"
+            alt="Selina Shin profile photo"
+          />
+        </div>
+        <div class="hero-text">
+          <h1>Hello, my name is Selina.</h1>
+          <div class="bio">
+            <p>
+              I'm a clinical psychologist taking the leap into coding. Since I
+              was younger, I enjoyed art and design. From drawing to Photoshop
+              to photography, I taught myself various ways to express my
+              creativity, and my newest form is through front-end
+              development. I hope to combine it with my other passion, mental
+              health and wellbeing. My dream is to build user-friendly,
+              aesthetic apps that make mental health care more accessible,
+              affordable, and effective for Australians. Outside of work and
+              coding, you'll find me bouldering, playing my flute, and spending
+              time with my friends.
+            </p>
+            <p>Join me as my worlds of psychology and technology collide.</p>
+          </div>
+        </div>
       </div>
-      <div class="hero">
-        <h1>Hello,</h1>
-        <h1>My name is Selina.</h1>
+
+      <div class="scroll-hint">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M12 5v14M5 12l7 7 7-7" />
+        </svg>
       </div>
-    </div>
-    <div class="bio">
-      <p>
-        I'm a clinical psychologist who is taking the leap into coding. For
-        years, I’ve helped clients navigate challenges, guiding and advising but
-        never able to directly fix the problems myself. Now, I’m ready to create
-        my own solutions. Combining my background in psychology with a passion
-        for mental health, I hope to build user-friendly apps that make a
-        difference for Australians by being accessible, affordable and
-        effective. Outside of work and coding, you’ll usually find me bouldering
-        or playing the flute with my band — two hobbies that keep me balanced,
-        creative, and always learning.
-      </p>
-      <p>Join me as my worlds of psychology and technology collide.</p>
-    </div>
+    </section>
+
+    <!-- ── PROJECTS SECTION ── -->
+    <section id="projects" class="mist-section">
+
+      <h2 class="section-title" id="projects-title">My Projects</h2>
+
+      <div class="projects-grid" id="projects-grid">
+
+            <a href="project1.html" class="project-card">
+              <img src="./img/project1.png" alt="Project 1 screenshot" />
+              <div class="project-info">
+                <h3>Crowdfunding App</h3>
+                <p>A She Codes Plus project using Django and React js.</p>
+              </div>
+            </a>
+          
+            <a href="project2.html" class="project-card">
+              <img src="./img/project2.png" alt="Project 2 screenshot" />
+              <div class="project-info">
+                <h3>Job Tracker</h3>
+                <p>A She Codes Plus group project using Django and React js.</p>
+              </div>
+            </a>
+          
+            <a href="project3.html" class="project-card">
+              <img src="./img/project3.png" alt="Project 3 screenshot" />
+              <div class="project-info">
+                <h3>Colour Analysis App</h3>
+                <p>A passion project using React js.</p>
+              </div>
+            </a>
+          </div>
+    </section>
+
+    <!-- ── CONTACT SECTION ── -->
+    <section id="contact" class="mist-section">
+
+        <img class="paper-plane" src="./img/plane.png" alt="paper-plane">
+  
+      <!-- mist overlay -->
+      <div
+        class="mist-cloud"
+        id="mist1"
+        style="width: 500px; height: 280px; top: 5%; left: -80px; z-index: 0"
+      ></div>
+      <div
+        class="mist-cloud"
+        id="mist2"
+        style="width: 350px; height: 200px; top: 40%; right: -60px"
+      ></div>
+      <div
+        class="mist-cloud"
+        id="mist3"
+        style="width: 280px; height: 180px; bottom: 10%; left: 20%"
+      ></div>
+
+      <div class="contact-inner">
+        <h2 id="contact-title">Get in touch</h2>
+
+        <div class="form" id="contact-form">
+          <form
+            action="https://formspree.io/f/mbdbpwpa"
+            method="POST"
+          >
+          <label for="your-name">Name</label>
+          <input type="text" id="your-name" name="your-name" required />
+          <label for="your-email">Email</label>
+          <input type="text" id="your-email" name="your-email" required />
+          <label for="message">Message</label>
+          <textarea
+            name="message-text"
+            id="message"
+            rows="7"
+            required
+          ></textarea>
+          <input type="submit"/>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+      <div class="footer-socials">
+        <h4>Find me on</h4>
+        <a href="https://github.com/smijis" aria-label="GitHub">
+          <img class="socials-icon" src="./img/github.png" alt="GitHub" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/selina-shin/"
+          aria-label="LinkedIn"
+        >
+          <img class="socials-icon" src="./img/linkedin.png" alt="LinkedIn" />
+        </a>
+      </div>
+      <p class="footer-copy">© Selina Shin 2026</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/BezierPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+
+    <script>
+      // -- plane animation --
+      const flightPath = {
+  curviness: 1.25,
+  autoRotate: true,
+  values: [
+    { x: 100, y: -20 },
+    { x: 300, y: 20 },
+    { x: 500, y: 120 },
+    { x: 500, y: -100},
+    { x: 350, y: -50},
+    { x: 500, y: 100 },
+    { x: 800, y: 0},
+    { x: window.innerWidth + 200, y: 180 }
+  ]
+};
+
+const tween = TweenLite.to('.paper-plane', 1, {
+  bezier: flightPath,
+  ease: Power1.easeInOut
+});
+
+const controller = new ScrollMagic.Controller();
+
+new ScrollMagic.Scene({
+  triggerElement: '#contact',
+  duration: 800,
+  triggerHook: 0.9
+})
+  .setTween(tween)
+  .addTo(controller);
+
+      // ── NAV: highlight active section on scroll ──
+      const navLinks = document.querySelectorAll(".navigation a");
+      const sections = document.querySelectorAll("section[id]");
+
+      function updateNav() {
+        let current = "";
+        sections.forEach((sec) => {
+          if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
+        });
+        navLinks.forEach((link) => {
+          link.classList.toggle(
+            "active",
+            link.getAttribute("href") === "#" + current
+          );
+        });
+      }
+
+      const header = document.getElementById("site-header");
+        function updateHeader() {
+          header.classList.toggle("scrolled", window.scrollY > 60);
+        }
+
+      const scrollHint = document.querySelector('.scroll-hint');
+      window.addEventListener('scroll', () => {
+        const opacity = Math.max(0, 1 - window.scrollY / 200);
+        scrollHint.style.opacity = opacity;
+      }, { passive: true });
+
+      // ── INTERSECTION OBSERVER: scroll-triggered reveals ──
+      const revealItems = document.querySelectorAll(
+        ".section-title, .project-card, .contact-inner h2, .form"
+      );
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+
+      revealItems.forEach((el) => revealObserver.observe(el));
+
+      // ── MIST CLOUDS: drift in when section enters view ──
+      const mistClouds = document.querySelectorAll(".mist-cloud");
+      const mistObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              // stagger the clouds slightly
+              entry.target.querySelectorAll;
+              setTimeout(
+                () => entry.target.classList.add("appear"),
+                parseInt(entry.target.id.replace("mist", "") || "0") * 150
+              );
+            }
+          });
+        },
+        { threshold: 0.05 }
+      );
+
+      mistClouds.forEach((c) => mistObserver.observe(c));
+
+      // ── SMOOTH scroll for anchor links ──
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", (e) => {
+          const target = document.querySelector(anchor.getAttribute("href"));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      });
+
+      // ── SQUIGGLE: set dasharray to actual path length ──
+      document.querySelectorAll(".navigation a").forEach((link) => {
+        const path = link.querySelector(".nav-squiggle path");
+        if (!path) return;
+
+        link.addEventListener("mouseenter", () => {
+          path.style.transition = "stroke-dashoffset 0.35s ease";
+          path.style.strokeDashoffset = 0;
+        });
+
+        link.addEventListener("mouseleave", () => {
+          path.style.transition = "stroke-dashoffset 0.25s ease";
+          path.style.strokeDashoffset = 100;
+        });
+      });
+
+      window.addEventListener(
+        "scroll",
+        () => {
+          updateNav();
+          updateHeader();
+        },
+        { passive: true }
+      );
+
+      updateNav();
+      updateHeader();
+
+    </script>
   </body>
 </html>
