@@ -46,7 +46,7 @@ html, body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to bottom, transparent 80%, #daf4fa 100%);
+  background: linear-gradient(to bottom, transparent 60%, #92bcc4 100%);
   z-index: 2;
 }
 
@@ -58,23 +58,6 @@ html, body {
   height: 100%;
   object-fit: cover;
   z-index: -2;
-}
-
-/* Static cloud-white gradient that covers the bottom of the page */
-.page-mist-overlay {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 40vh;
-  background: linear-gradient(
-    to top,
-    rgba(240, 246, 250, 0) 0%,
-    rgba(240, 246, 250, 0) 100%
-  );
-  z-index: -1;
-  pointer-events: none;
-  transition: background 0.5s ease;
 }
 
 /* Header and Nav */
@@ -123,9 +106,10 @@ html, body {
 
 .nav-squiggle {
   position: absolute;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: -5px;
-  width: 100%;
+  width: 50px;
   height: 6px;
   overflow: visible;
   pointer-events: none;
@@ -219,16 +203,96 @@ html, body {
 }
 
 /* Mist sections */
-.mist-section {
-  /* the projects and contact sections that have mist effects */
+
+/* skills section mist effect*/
+.mist-section2 {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    #92bcc4 0%,
+    #6b9eaa 45%,
+    #82adb8 65%,
+    #a8cdd4 80%,
+    #c4e2e8 90%,
+    #daf4fa 100%
+  );
+  }
+  
+  .mist-section2::before,
+  .mist-section2::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    border-radius: 50%;
+    background: rgba(13, 7, 17, 0.15);
+    filter: blur(60px);
+    pointer-events: none;
+    animation: drift 18s ease-in-out infinite alternate;
+    z-index: 0;
+  }
+  
+  .mist-section2::before {
+    width: 500px;
+    height: 300px;
+    top: 10%;
+    left: -120px;
+    animation-delay: 0s;
+  }
+  
+  .mist-section2::after {
+    width: 400px;
+    height: 250px;
+    bottom: 10%;
+    right: -100px;
+    animation-delay: -6s;
+  }
+
+/* project section mist effect */
+.mist-section3 {
+  background:#daf4fa;
+  position: relative;
+  z-index: 1;
+}
+
+.mist-section3::before,
+.mist-section3::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  background: rgba(13,7,17,0.08);
+  filter: blur(60px);
+  pointer-events: none;
+  animation: drift 18s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+.mist-section3::before {
+  width: 500px;
+  height: 300px;
+  top: 10%;
+  left: -120px;
+  animation-delay: 0s;
+}
+
+.mist-section3::after {
+  width: 400px;
+  height: 250px;
+  bottom: 10%;
+  right: -100px;
+  animation-delay: -6s;
+}
+
+/* contact section mist effects */
+.mist-section1 {
   background: var(--mist-solid);
   position: relative;
   z-index: 1;
 }
 
-/* Animated mist blobs that drift in from sides */
-.mist-section::before,
-.mist-section::after {
+.mist-section1::before,
+.mist-section1::after {
   content: "";
   position: absolute;
   z-index: 0;
@@ -237,9 +301,10 @@ html, body {
   filter: blur(60px);
   pointer-events: none;
   animation: drift 18s ease-in-out infinite alternate;
+  z-index: 0;
 }
 
-.mist-section::before {
+.mist-section1::before {
   width: 500px;
   height: 300px;
   top: 10%;
@@ -247,7 +312,7 @@ html, body {
   animation-delay: 0s;
 }
 
-.mist-section::after {
+.mist-section1::after {
   width: 400px;
   height: 250px;
   bottom: 10%;
@@ -264,6 +329,100 @@ html, body {
   }
 }
 
+/* Skills Section */
+
+#skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 40px 160px 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.sparkle-field {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgb(255, 251, 201);
+  opacity: 0;
+  animation: twinkle ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 0.8; transform: scale(1.5); }
+}
+
+.constellation {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  background: radial-gradient(ellipse at center, rgba(13,7,17,0.08) 40%, transparent 70%);
+  border-radius: 50%;
+}
+
+.constellation.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.line {
+  stroke: #66b7ce;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 0 5px;
+  opacity: 0.6;
+}
+
+/* labels */
+.label,
+.label-sm {
+  fill: #fff9d6;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.label {
+  font-size: 16px;
+}
+
+.label-sm {
+  font-size: 14px;
+}
+
+.star {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform-origin: center;
+  filter: drop-shadow(0 0 3px rgba(255,255,255,0.9))
+  drop-shadow(0 0 6px rgba(255, 221, 0, 0.457));
+}
+
+.star:hover + .label,
+.star:hover + .label-sm {
+  opacity: 1;
+  filter:
+  drop-shadow(0 0 10px rgba(255,255,255,1))
+  drop-shadow(0 0 20px rgba(255,221,0,0.9))
+  drop-shadow(0 0 40px rgba(255,221,0,0.7));
+}
+
 /* Projects Section */
 #projects {
   padding: 80px 40px;
@@ -277,6 +436,8 @@ html, body {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.7s ease, transform 0.7s ease;
+  position: relative;
+  z-index: 1;
 }
 
 .section-title.visible {
@@ -388,12 +549,16 @@ html, body {
   padding: 80px 40px 60px;
   background: linear-gradient(to bottom, #daf4fa 0%, white 150px);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+  position: relative;
+  z-index: 2;
 }
 
 .contact-inner {
   max-width: 480px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .contact-inner h2 {
@@ -502,6 +667,7 @@ footer {
   height: 38px;
   transition: transform 0.2s;
 }
+
 .socials-icon:hover {
   transform: translateY(-3px);
 }

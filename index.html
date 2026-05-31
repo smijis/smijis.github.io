@@ -34,6 +34,17 @@
                   /></svg></a>
             </li>
             <li>
+              <a href="#skills"
+                >Skills<svg
+                  class="nav-squiggle"
+                  aria-hidden="true"
+                  viewBox="0 0 60 6"
+                >
+                  <path
+                    d="M0 5 Q5 1 10 5 Q15 9 20 5 Q25 1 30 5 Q35 9 40 5 Q45 1 50 5 Q55 9 60 5"
+                  /></svg></a>
+            </li>
+            <li>
               <a href="#projects"
                 >Projects<svg
                   class="nav-squiggle"
@@ -98,8 +109,74 @@
       </div>
     </section>
 
+    <!-- -- SKILLS SECTION -- -->
+     <section id="skills" class="mist-section2">
+      <h2 class="section-title">My Skills</h2>
+      <div class="sparkle-field"></div>
+      <svg class="constellation" viewBox="40 100 620 520" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+        <filter id="glow-large">
+          <feGaussianBlur stdDeviation="6" result="blur" />
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="glow-medium">
+          <feGaussianBlur stdDeviation="4" result="blur" />
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="glow-small">
+          <feGaussianBlur stdDeviation="2.5" result="blur" />
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        </defs>
+    
+        <polyline class="line" points="168,267 310,327 357,334 381,336 373,317 357,295 293,247 205,182" fill="none"/>
+        <polyline class="line" points="432,447 533,397 436,371 381,336" fill="none"/>
+        <line class="line" x1="550" y1="412" x2="512" y2="508"/>
+        
+    
+        <circle class="star" cx="205" cy="182" r="9" fill="#fff9d6" filter="url(#glow-large)"/>
+        <text class="label" x="220" y="170">Python</text>
+    
+        <circle class="star" cx="293" cy="247" r="8" fill="#ffffff" filter="url(#glow-medium)"/>
+        <text class="label" x="310" y="245">Django</text>
+    
+        <circle class="star" cx="357" cy="295" r="7" fill="#ffffff" filter="url(#glow-medium)"/>
+        <text class="label" x="370" y="284">React</text>
+    
+        <circle class="star" cx="310" cy="327" r="10" fill="#fff8e8" filter="url(#glow-large)"/>
+        <text class="label" x="210" y="350">JavaScript</text>
+    
+        <circle class="star" cx="373" cy="317" r="7.5" fill="#fff9d6" filter="url(#glow-medium)"/>
+        <text class="label" x="390" y="311">CSS</text>
+    
+        <circle class="star" cx="357" cy="334" r="6.5" fill="#fff8e8" filter="url(#glow-medium)"/>
+        <text class="label" x="330" y="370">HTML</text>
+    
+        <!-- subtle star -->
+        <circle cx="381" cy="336" r="5" fill="#ffe4a3" opacity="0.3"/>
+    
+        <circle class="star" cx="436" cy="371" r="6" fill="#ffffff" filter="url(#glow-small)"/>
+        <text class="label-sm" x="440" y="360">Git</text>
+    
+        <circle class="star" cx="533" cy="397" r="6" fill="#fff9d6" filter="url(#glow-small)"/>
+        <text class="label-sm" x="540" y="385">GitHub</text>
+    
+        <circle class="star" cx="553" cy="405" r="5.5" fill="#ffffff" filter="url(#glow-small)"/>
+        <text class="label-sm" x="568" y="402">VS Code</text>
+    
+        <!-- subtle star -->
+        <circle cx="432" cy="447" r="5" fill="#ffe4a3" opacity="0.3"/>
+
+        <circle class="star" cx="512" cy="508" r="6" fill="#fff9d6" filter="url(#glow-small)"/>
+        <text class="label-sm" x="525" y="528">Figma</text>
+    
+        <!-- subtle star -->
+        <circle cx="168" cy="267" r="5" fill="#ffe4a3" opacity="0.3"/>
+      </svg>
+    </section>
+
     <!-- ── PROJECTS SECTION ── -->
-    <section id="projects" class="mist-section">
+    <section id="projects" class="mist-section3">
 
       <h2 class="section-title" id="projects-title">My Projects</h2>
 
@@ -109,7 +186,7 @@
               <img src="./img/project1.png" alt="Project 1 screenshot" />
               <div class="project-info">
                 <h3>Crowdfunding App</h3>
-                <p>A She Codes Plus project using Django and React js.</p>
+                <p>A She Codes Plus project using Django and React.js.</p>
               </div>
             </a>
           
@@ -117,7 +194,7 @@
               <img src="./img/project2.png" alt="Project 2 screenshot" />
               <div class="project-info">
                 <h3>Job Tracker</h3>
-                <p>A She Codes Plus group project using Django and React js.</p>
+                <p>A She Codes Plus group project using Django and React.js.</p>
               </div>
             </a>
           
@@ -125,14 +202,14 @@
               <img src="./img/project3.png" alt="Project 3 screenshot" />
               <div class="project-info">
                 <h3>Colour Analysis App</h3>
-                <p>A passion project using React js.</p>
+                <p>A passion project using React.js.</p>
               </div>
             </a>
           </div>
     </section>
 
     <!-- ── CONTACT SECTION ── -->
-    <section id="contact" class="mist-section">
+    <section id="contact" class="mist-section1">
 
         <img class="paper-plane" src="./img/plane.png" alt="paper-plane">
   
@@ -202,22 +279,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/BezierPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
 
-    <script>
-      // -- plane animation --
-      const flightPath = {
-  curviness: 1.25,
-  autoRotate: true,
-  values: [
-    { x: 100, y: -20 },
-    { x: 300, y: 20 },
-    { x: 500, y: 120 },
-    { x: 500, y: -100},
-    { x: 350, y: -50},
-    { x: 500, y: 100 },
-    { x: 800, y: 0},
-    { x: window.innerWidth + 200, y: 180 }
-  ]
-};
+<script>
+  // plane animation
+  const flightPath = {
+    curviness: 1.25,
+    autoRotate: true,
+    values: [
+      { x: 100, y: -20 },
+      { x: 300, y: 20 },
+      { x: 500, y: 120 },
+      { x: 500, y: -100},
+      { x: 350, y: -50},
+      { x: 500, y: 100 },
+      { x: 800, y: 0},
+      { x: 1000, y: 250 },
+      { x: 1200, y: 400 },
+      { x: window.innerWidth - 100, y: window.innerHeight - 310 },
+      { x: window.innerWidth, y: window.innerHeight - 310 },
+    ]
+  };
 
 const tween = TweenLite.to('.paper-plane', 1, {
   bezier: flightPath,
@@ -234,7 +314,7 @@ new ScrollMagic.Scene({
   .setTween(tween)
   .addTo(controller);
 
-      // ── NAV: highlight active section on scroll ──
+      // highlight active section on scroll
       const navLinks = document.querySelectorAll(".navigation a");
       const sections = document.querySelectorAll("section[id]");
 
@@ -262,9 +342,9 @@ new ScrollMagic.Scene({
         scrollHint.style.opacity = opacity;
       }, { passive: true });
 
-      // ── INTERSECTION OBSERVER: scroll-triggered reveals ──
+      // INTERSECTION OBSERVER: scroll-triggered reveals
       const revealItems = document.querySelectorAll(
-        ".section-title, .project-card, .contact-inner h2, .form"
+        ".section-title, .project-card, .contact-inner h2, .form, .constellation"
       );
       const revealObserver = new IntersectionObserver(
         (entries) => {
@@ -279,7 +359,7 @@ new ScrollMagic.Scene({
 
       revealItems.forEach((el) => revealObserver.observe(el));
 
-      // ── MIST CLOUDS: drift in when section enters view ──
+      // MIST CLOUDS: drift in when section enters view
       const mistClouds = document.querySelectorAll(".mist-cloud");
       const mistObserver = new IntersectionObserver(
         (entries) => {
@@ -299,7 +379,7 @@ new ScrollMagic.Scene({
 
       mistClouds.forEach((c) => mistObserver.observe(c));
 
-      // ── SMOOTH scroll for anchor links ──
+      // SMOOTH scroll for anchor links
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", (e) => {
           const target = document.querySelector(anchor.getAttribute("href"));
@@ -310,7 +390,21 @@ new ScrollMagic.Scene({
         });
       });
 
-      // ── SQUIGGLE: set dasharray to actual path length ──
+      // sparkles in skills section
+      const field = document.querySelector('.sparkle-field');
+      const count = 60;
+
+        for (let i = 0; i < count; i++) {
+          const sparkle = document.createElement('div');
+          sparkle.classList.add('sparkle');
+          sparkle.style.left = Math.random() * 100 + '%';
+          sparkle.style.top = Math.random() * 100 + '%';
+          sparkle.style.animationDelay = Math.random() * 4 + 's';
+          sparkle.style.animationDuration = (Math.random() * 3 + 2) + 's';
+          field.appendChild(sparkle);
+  }
+
+      // SQUIGGLE: set dasharray to actual path length
       document.querySelectorAll(".navigation a").forEach((link) => {
         const path = link.querySelector(".nav-squiggle path");
         if (!path) return;
