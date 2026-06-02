@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selina Shin</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+  </head>
+    <header class="header" id="site-header">
+      <a href="index.html">
+        <img src="./img/logo1.png" alt="My Portfolio Logo" class="logo" />
+      </a>
+      <nav class="navigation" aria-label="Primary">
+        <ul>
+          <li>
+            <a href="#home" class="active"
+              >Home<svg
+                class="nav-squiggle"
+                aria-hidden="true"
+                viewBox="0 0 60 6"
+              >
+                <path
+                  d="M0 5 Q5 1 10 5 Q15 9 20 5 Q25 1 30 5 Q35 9 40 5 Q45 1 50 5 Q55 9 60 5"
+                /></svg></a>
+          </li>
+          <li>
+            <a href="#skills"
+              >Skills<svg
+                class="nav-squiggle"
+                aria-hidden="true"
+                viewBox="0 0 60 6"
+              >
+                <path
+                  d="M0 5 Q5 1 10 5 Q15 9 20 5 Q25 1 30 5 Q35 9 40 5 Q45 1 50 5 Q55 9 60 5"
+                /></svg></a>
+          </li>
+          <li>
+            <a href="#projects"
+              >Projects<svg
+                class="nav-squiggle"
+                aria-hidden="true"
+                viewBox="0 0 60 6"
+              >
+                <path
+                  d="M0 5 Q5 1 10 5 Q15 9 20 5 Q25 1 30 5 Q35 9 40 5 Q45 1 50 5 Q55 9 60 5"
+                /></svg></a>
+          </li>
+          <li>
+            <a href="#contact"
+              >Contact<svg
+                class="nav-squiggle"
+                aria-hidden="true"
+                viewBox="0 0 60 6"
+              >
+                <path
+                  d="M0 5 Q5 1 10 5 Q15 9 20 5 Q25 1 30 5 Q35 9 40 5 Q45 1 50 5 Q55 9 60 5"
+                /></svg></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <body>
+
+    <section id="project-detail">
+
+        <!-- Title -->
+        <div class="project-header">
+          <h1>Colour Analysis</h1>
+          <p class="project-subtitle">
+            A React app that identifies the dominant colours in clothing items and evaluates their compatibility with the 12 seasonal colour palettes.
+          </p>
+        </div>
+
+        <!-- Project Facts -->
+        <div class="project-facts">
+            <div class="fact">
+              <span class="fact-label">Timeline</span>
+              <span class="fact-value">2 Weeks</span>
+            </div>
+        
+            <div class="fact">
+              <span class="fact-label">Type</span>
+              <span class="fact-value">Frontend</span>
+            </div>
+        
+            <div class="fact">
+              <span class="fact-label">Client/Program</span>
+              <span class="fact-value">Personal Project</span>
+            </div>
+        
+            <div class="fact">
+              <span class="fact-label">Role</span>
+              <span class="fact-value">Solo Developer</span>
+            </div>
+          </div>
+      
+        <!-- Summary -->
+        <div class="project-section">
+          <h2>Overview</h2>
+      
+          <p>
+            Have you ever worn an outfit and received compliments for how it seems to make you glow? That’s the idea behind colour analysis, which has become one of the hottest trends recently. It's the process to identify the colours that best complement your natural skin tone, hair, and eye colour. People are typically categorised into 12 seasonal palettes across Spring, Summer, Autumn, and Winter.
+          </p>
+      
+          <p>
+            I was recently analysed as a Soft Autumn, and while excited to shop accordingly, I quickly realised how difficult it is to distinguish warm versus cool tones in real-world clothing.
+          </p>
+
+          <p>
+            Give it a go yourself. Can you tell which are the warm and cool tones?
+          </p>
+          <div class="colourtones">
+            <img
+            src="./img/colourtones.png"
+            alt="Warm and Cool Tone Blues"
+            />
+        </div>
+      
+          <p>
+            After hours of shopping, Googling whether a shade was cool or warm tone, whether it suited my season or not, I thought there must be an easier way.
+            </p>
+
+            <p>
+            My problem to solve: Make it easier, faster, and more accessible to identify whether clothing items match a person’s colour palette without needing a professional by your side.
+            </p>
+        </div>
+      
+        <!-- Target Users -->
+        <div class="project-section">
+          <div class="learnt-layout">
+            <div class="learnt-content">
+          <h2>Target Users</h2>
+      
+          <ul>
+            <li>People who have had a professional colour analysis and want to apply it while shopping</li>
+            <li>Individuals interested in colour theory and personal styling</li>
+            <li>Fashion-conscious users who want to dress more intentionally</li>
+          </ul>
+          </div>
+            <div class="colouranalysis1">
+              <img
+              src="./img/CA1.png"
+              alt="Screenshot of Colour Analysis App"
+              />
+            </div>
+        </div>
+      </div>
+      
+        <!-- Tech Stack -->
+        <div class="project-section">
+            <h2>Tech Stack</h2>
+            <div class="tech-stack">
+                <div>
+                    <h3>Frontend</h3>
+                    <ul>
+                    <li>React (Vite)</li>
+                    </ul>
+                </div>
+            
+                <div>
+                    <h3>Deployment</h3>
+                    <ul>
+                    <li>Heroku</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Colour Science</h3>
+                    <ul>
+                    <li>LAB Colour Space</li>
+                    <li>k-means Clustering (in-browser image analysis)</li>
+                </ul>
+                </div>
+            </div>
+        </div>
+
+      
+        <!-- Features -->
+        <div class="project-section">
+          <div class="learnt-layout">
+            <div class="learnt-content">
+              <h2>Features</h2>
+          
+              <ul>
+                <li>Upload clothing images for instant colour analysis</li>
+                <li>Select from 12 seasonal colour palettes</li>
+                <li>Dominant colour extraction using k-means clustering</li>
+                <li>Perceptual scoring across temperature, chroma, and value</li>
+                <li>Colour naming for extracted clusters (e.g. soft teal)</li>
+                <li>Visual breakdown of palette compatibility</li>
+                <li>Fully client-side. No APIs or data storage</li>
+              </ul>
+            </div>
+            <div class="colouranalysis2">
+              <img
+              src="./img/CA2.png"
+              alt="Screenshot of Colour Analysis App"
+              />
+            </div>
+        </div>
+        </div>
+      
+        <!-- Challenges -->
+        <div class="project-section">
+          <h2>Challenges & Solutions</h2>
+      
+          <h3>Improving colour accuracy</h3>
+          <p>
+            Early versions relied on simple HSB averaging, which often produced inaccurate results. I improved accuracy by introducing LAB colour space for perceptual measurement, k-means clustering for dominant colour separation, and a seasonal scoring system based on real colour analysis principles. I used ChatGPT throughout this process as a debugging partner, sharing scores and asking for diagnosis. That back-and-forth loop — implement, test, share results, refine. This pushed the accuracy from around 60% to what I'd estimate is 85–90% on typical clothing colours.
+          </p>
+      
+          <h3>Background removal without libraries</h3>
+          <p>
+            To prevent backgrounds from affecting results, I built a lightweight in-browser filtering method to exclude near-neutral pixels, with a fallback approach for neutral garments like black, white, and grey clothing.
+          </p>
+
+          <div class="colouranalysis3">
+            <img
+            src="./img/CA3.png"
+            alt="Screenshot of Colour Analysis App"
+            />
+        </div>
+        </div>
+
+      
+        <!-- What I Learned -->
+        <div class="project-section">
+          <h2>What I Learned</h2>
+      
+          <ul>
+            <li>There's a difference between something that works and something that is accurate. Early versions of the app produced results but they were often wrong. A muted teal would score the same as a vivid cobalt. A warm brick red would fail its own season. Working meant the button did something. Accurate meant the result was trustworthy. Closing that gap was most of the work.</li>
+
+            <li>LAB colour space better reflects human perception than RGB/HSB. RGB is how screens display colour and HSB is how designers think about it. But neither maps to how the human eye actually perceives difference. LAB was designed so that two colours equally far apart in the model look equally different to a person. Once I switched to LAB for chroma measurement (how colourful something looks), the scoring immediately became more intuitive.</li>
+            
+            <li>Vibe-coding has a ceiling. A lot of this project was built iteratively with AI assistance — write something, see what happens, adjust. That approach is fast and genuinely fun, and it got me surprisingly far. But the accuracy work showed me where it breaks down. When six penalty functions are interacting across twelve season targets, intuition isn't enough. You need to understand why something is wrong, not just that it is.</li>
+            
+            <li>Testing and validation are essential for algorithm improvement. Early on I was making changes and eyeballing results. Progress only became consistent once I built a proper test suite — a set of colours with known expected outputs, checked after every change. If a fix improved one colour but broke three others, I'd know immediately rather than weeks later.</li>
+            
+            <li>Iterative refinement dramatically improves output quality. The first version scored colours on a single averaged pixel. The final version uses LAB chroma, k-means clustering, graduated penalties, hue affinity zones, and season-specific scoring curves. None of that was planned upfront — it was each problem revealing the next one.</li>
+            
+            <li>Building without APIs improves speed, privacy, and simplicity. No server calls means results are instant. No data leaves the browser means nothing is stored or tracked. No API key means anyone can run it for free. Constraints that felt like limitations turned out to make the product better.</li>
+          </ul>
+        </div>
+
+                    <!-- Live Demo -->
+                    <div class="project-section project-links">
+                        <a
+                          href="https://jobtrackerpenguins.netlify.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="project-btn"
+                        >
+                          View Live Project
+                        </a>
+                      </div>
+      
+      </section>
+      </body>
+
+          <!-- ── FOOTER ── -->
+    <footer>
+        <div class="footer-socials">
+          <h4>Find me on</h4>
+          <a href="https://github.com/smijis" aria-label="GitHub">
+            <img class="socials-icon" src="./img/github.png" alt="GitHub" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/selina-shin/"
+            aria-label="LinkedIn"
+          >
+            <img class="socials-icon" src="./img/linkedin.png" alt="LinkedIn" />
+          </a>
+        </div>
+        <p class="footer-copy">© Selina Shin 2026</p>
+      </footer>
