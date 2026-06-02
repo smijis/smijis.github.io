@@ -20,8 +20,13 @@
         <a href="index.html">
           <img src="./img/logo1.png" alt="My Portfolio Logo" class="logo" />
         </a>
+        
+        <button class="menu-btn">
+          <img src="./img/sun2.png" alt="Menu">
+        </button>
+
         <nav class="navigation" aria-label="Primary">
-          <ul>
+          <ul> 
             <li>
               <a href="#home" class="active"
                 >Home<svg
@@ -113,7 +118,7 @@
      <section id="skills" class="mist-section2">
       <h2 class="section-title">My Skills</h2>
       <div class="sparkle-field"></div>
-      <svg class="constellation" viewBox="40 100 620 520" xmlns="http://www.w3.org/2000/svg">
+      <svg class="constellation" viewBox="25 85 645 580" xmlns="http://www.w3.org/2000/svg">
         <defs>
         <filter id="glow-large">
           <feGaussianBlur stdDeviation="6" result="blur" />
@@ -280,7 +285,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
 
 <script>
+
+const menuBtn = document.querySelector('.menu-btn');
+const navigation = document.querySelector('.navigation');
+
+menuBtn.addEventListener('click', () => {
+  navigation.classList.toggle('open'); 
+});
+
   // plane animation
+  const sectionWidth = document.querySelector("#contact").offsetWidth;
   const flightPath = {
     curviness: 1.25,
     autoRotate: true,
@@ -291,11 +305,11 @@
       { x: 500, y: -100},
       { x: 350, y: -50},
       { x: 500, y: 100 },
-      { x: 800, y: 0},
-      { x: 1000, y: 250 },
-      { x: 1200, y: 400 },
-      { x: window.innerWidth - 100, y: window.innerHeight - 310 },
-      { x: window.innerWidth, y: window.innerHeight - 310 },
+      { x: 900, y: 0},
+      { x: sectionWidth - 300, y: 300 },
+      { x: sectionWidth - 120, y: 480 },
+      { x: sectionWidth - 50, y: 480 },
+      { x: sectionWidth - 60, y: 490 }
     ]
   };
 
