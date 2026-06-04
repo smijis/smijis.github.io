@@ -161,7 +161,7 @@ footer {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to bottom, transparent 60%, #92bcc4 100%);
+  background: linear-gradient(to bottom, transparent 40%, #92bcc4 80%, #8eb8bf 100%);
   z-index: 2;
 }
 
@@ -223,31 +223,18 @@ footer {
 
 .scroll-hint {
   position: relative;
-  z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 6px;
   font-size: 0.75rem;
   letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(13, 7, 17, 0.45);
-  animation: bounce 2.2s ease-in-out infinite;
+  visibility: hidden;
 }
 
 .scroll-hint svg {
   width: 18px;
-  opacity: 0.8;
-}
-
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(6px);
-  }
+  opacity: 0;
 }
 
 /* =========================
@@ -265,7 +252,8 @@ footer {
     #82adb8 65%,
     #a8cdd4 80%,
     #c4e2e8 90%,
-    #daf4fa 100%
+    #daf4fa 100%,
+    #e1f7fb 100%
   );
   }
   
@@ -980,6 +968,36 @@ width: 100%;
   .bio {
     font-size: 1rem;
   }
+
+
+.scroll-hint {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(13, 7, 17, 0.45);
+  animation: bounce 2.2s ease-in-out infinite;
+}
+
+.scroll-hint svg {
+  width: 18px;
+  opacity: 0.8;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
 
   #skills {
     flex-direction: row;
