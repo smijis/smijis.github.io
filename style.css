@@ -1221,3 +1221,25 @@ width: 100%;
     gap: 24px;
   }
 }
+
+
+/* =========================
+   LARGE DESKTOP SCREEN LAYOUT - RESPONSIVE DESIGN
+========================= */
+
+@media (min-width: 1600px) {
+
+  .hero-content {
+    flex-direction: row;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 180px 80px 100px;
+  }
+
+  #home {
+    background: linear-gradient(to bottom, transparent 40%, #92bcc4 80%, #8FBAC2 100%);
+  }
+
+}
