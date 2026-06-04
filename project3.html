@@ -230,17 +230,17 @@
           <h2>What I Learned</h2>
       
           <ul>
-            <li>There's a difference between something that works and something that is accurate. Early versions of the app produced results but they were often wrong. A muted teal would score the same as a vivid cobalt. A warm brick red would fail its own season. Working meant the button did something. Accurate meant the result was trustworthy. Closing that gap was most of the work.</li>
+            <li>I learned there is a big difference between a feature that works and one that is accurate. Early on, the app worked, but frequently produced incorrect results and would say a shade belonged to a season which it didn't. Fixing these individual rules and closing the gap to improve accuracy became the bulk of the work.</li>
 
-            <li>LAB colour space better reflects human perception than RGB/HSB. RGB is how screens display colour and HSB is how designers think about it. But neither maps to how the human eye actually perceives difference. LAB was designed so that two colours equally far apart in the model look equally different to a person. Once I switched to LAB for chroma measurement (how colourful something looks), the scoring immediately became more intuitive.</li>
+            <li>While RGB and HSB are commonly used on screens and by designers, neither map to actual human perception. Switching to the LAB model changed everything as it calculates the mathematical distance of colours which mimics the way our brains perceive colour, making the chroma scoring more intuitive.</li>
             
-            <li>Vibe-coding has a ceiling. A lot of this project was built iteratively with AI assistance — write something, see what happens, adjust. That approach is fast and genuinely fun, and it got me surprisingly far. But the accuracy work showed me where it breaks down. When six penalty functions are interacting across twelve season targets, intuition isn't enough. You need to understand why something is wrong, not just that it is.</li>
+            <li>Vibe-coding has a ceiling. Building this app iteratively wiht AI assistance was fast, fun and got me far. However, the "write and see what happens" approach quickly broke down when it came to the accuracy of the algorithm. Only I, with the human eye, could detect the errors in the results and had to manually adjust and improve.</li>
             
-            <li>Testing and validation are essential for algorithm improvement. Early on I was making changes and eyeballing results. Progress only became consistent once I built a proper test suite — a set of colours with known expected outputs, checked after every change. If a fix improved one colour but broke three others, I'd know immediately rather than weeks later.</li>
+            <li>Testing and validation are essential for algorithm improvement. Early on I was making changes and eyeballing results. Progress only became consistent once I built a proper test suite of colours with known expected outputs and checked after every change. The frustrating times were when a fix improved one colour but broke three others.</li>
             
-            <li>Iterative refinement dramatically improves output quality. The first version scored colours on a single averaged pixel. The final version uses LAB chroma, k-means clustering, graduated penalties, hue affinity zones, and season-specific scoring curves. None of that was planned upfront — it was each problem revealing the next one.</li>
+            <li>Iterative refinement dramatically improves output quality. Rather than planning a complex system upfront, the project evolved as each problem revealed the next. The app grew from a basic, single-pixel average into a pipeline using LAB chroma, k-means clustering, and season-specific scoring curves.</li>
             
-            <li>Building without APIs improves speed, privacy, and simplicity. No server calls means results are instant. No data leaves the browser means nothing is stored or tracked. No API key means anyone can run it for free. Constraints that felt like limitations turned out to make the product better.</li>
+            <li>Choosing to build without external APIs made the final product better. By keeping everything client-side means results are instant, no user data leaves the browser, and anyone can run it for free.</li>
           </ul>
         </div>
 

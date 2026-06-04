@@ -120,16 +120,34 @@
       <div class="sparkle-field"></div>
       <svg class="constellation" viewBox="25 85 645 580" xmlns="http://www.w3.org/2000/svg">
         <defs>
-        <filter id="glow-large">
-          <feGaussianBlur stdDeviation="6" result="blur" />
-          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-        </filter>
-        <filter id="glow-medium">
-          <feGaussianBlur stdDeviation="4" result="blur" />
-          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-        </filter>
-        <filter id="glow-small">
-          <feGaussianBlur stdDeviation="2.5" result="blur" />
+          <filter id="glow-large">
+            <filter
+    id="glow-large"
+    x="-100%"
+    y="-100%"
+    width="300%"
+    height="300%"
+  />
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <filter id="glow-medium">
+            <filter
+    id="glow-medium"
+    x="-100%"
+    y="-100%"
+    width="300%"
+    height="300%"
+  />
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <filter id="glow-small">
+            <filter
+    id="glow-small"
+    x="-100%"
+    y="-100%"
+    width="300%"
+    height="300%"
+  />
           <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
         </filter>
         </defs>
@@ -149,7 +167,7 @@
         <text class="label" x="370" y="284">React</text>
     
         <circle class="star" cx="310" cy="327" r="10" fill="#fff8e8" filter="url(#glow-large)"/>
-        <text class="label" x="210" y="350">JavaScript</text>
+        <text class="label" x="200" y="350">JavaScript</text>
     
         <circle class="star" cx="373" cy="317" r="7.5" fill="#fff9d6" filter="url(#glow-medium)"/>
         <text class="label" x="390" y="311">CSS</text>
