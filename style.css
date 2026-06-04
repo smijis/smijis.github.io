@@ -948,6 +948,15 @@ width: 100%;
     stroke-dashoffset: 100;
   }
 
+  #home {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, transparent 60%, #92bcc4 100%);
+    z-index: 2;
+  }
+
   .hero-content {
     flex-direction: row;
     text-align: left;
@@ -998,6 +1007,20 @@ width: 100%;
     transform: translateY(6px);
   }
 }
+
+.mist-section2 {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    #92bcc4 0%,
+    #6b9eaa 45%,
+    #82adb8 65%,
+    #a8cdd4 80%,
+    #c4e2e8 90%,
+    #daf4fa 100%
+  );
+  }
 
   #skills {
     flex-direction: row;
