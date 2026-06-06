@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selina Shin</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+  </head>
+  <header class="header" id="site-header">
+    <a href="index.html">
+      <img src="./img/logo1.png" alt="My Portfolio Logo" class="logo" />
+    </a>
+    <nav class="navigation" aria-label="Primary">
+      <ul>
+        <li>
+          <a href="index.html#home">Home<svg class="nav-squiggle" aria-hidden="true" viewBox="0 0 60 6"><path d="M0 5 Q5 1 10 5 Q15 9 20 5 Q25 1 30 5 Q35 9 40 5 Q45 1 50 5 Q55 9 60 5"/></svg></a>
+        </li>
+        <li>
+          <a href="index.html#skills">Skills<svg class="nav-squiggle" aria-hidden="true" viewBox="0 0 60 6"><path d="M0 5 Q5 1 10 5 Q15 9 20 5 Q25 1 30 5 Q35 9 40 5 Q45 1 50 5 Q55 9 60 5"/></svg></a>
+        </li>
+        <li>
+          <a href="index.html#projects" class="active">Projects<svg class="nav-squiggle" aria-hidden="true" viewBox="0 0 60 6"><path d="M0 5 Q5 1 10 5 Q15 9 20 5 Q25 1 30 5 Q35 9 40 5 Q45 1 50 5 Q55 9 60 5"/></svg></a>
+        </li>
+        <li>
+          <a href="index.html#contact">Contact<svg class="nav-squiggle" aria-hidden="true" viewBox="0 0 60 6"><path d="M0 5 Q5 1 10 5 Q15 9 20 5 Q25 1 30 5 Q35 9 40 5 Q45 1 50 5 Q55 9 60 5"/></svg></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <body>
+    <section id="project-detail">
+
+      <div class="project-header">
+        <!-- Banner -->
+        <div class="project-banner3">
+            <h1>Campfire Counsellor</h1>
+        </div>
+        <p class="project-subtitle">
+          A calming, browser-based experience where you can write a worry, a thought, or a feeling and watch it dissolve into the fire.
+        </p>
+      </div>
+
+      <!-- Project Facts -->
+      <div class="project-facts">
+        <div class="fact">
+          <span class="fact-label">Timeline</span>
+          <span class="fact-value">1 Week</span>
+        </div>
+
+        <div class="fact">
+          <span class="fact-label">Type</span>
+          <span class="fact-value">Frontend</span>
+        </div>
+
+        <div class="fact">
+          <span class="fact-label">Team</span>
+          <span class="fact-value">Solo</span>
+        </div>
+
+        <div class="fact">
+          <span class="fact-label">Platform</span>
+          <span class="fact-value">Web (Local)</span>
+        </div>
+      </div>
+
+      <!-- Overview -->
+      <div class="project-section">
+        <div class="side-by-side">
+          <div class="overview-content">
+            <h2>Overview</h2>
+
+            <p>
+                Campfire Counsellor is a personal, self-directed project I built to explore creative frontend development and interactive animation. The idea was simple and inspired by my yearly winter camping trips with friends. It has meaningful connections to both my personal and professional life. I believe that being present with nature is therapeutic and healing, and although ironically it is through a screen, I hope the app brings purpose to those who need it and can't leave their desks.
+            </p>
+
+            <p>
+              The app takes whatever you write, breaks it into individual words, and animates each one rising from a campfire. The words float upward and fade into the night sky. The experience is intentionally designed to be slow and gentle. If you have no thoughts to share, that's ok. Simple enjoy watching the campfire and adjust the sounds and music to your liking.
+            </p>
+
+            <p>
+                Campfire Counsellor is entirely frontend. There is no backend, no database, no accounts. Just you, the fire, and whatever you need to let go of. The project also gave me the chance to experiment with things I hadn't tried before: looping video backgrounds, Web Animations API, and layered ambient audio to build an immersive experience.
+            </p>
+          </div>
+          <div class="kanban">
+            <img
+              src="./img/campfire.png"
+              alt="Campfire Counsellor app screenshot"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Stack -->
+      <div class="project-section">
+        <h2>Tech Stack</h2>
+
+        <div class="tech-stack">
+          <div>
+            <h3>Frontend</h3>
+            <ul>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>Web Animations API</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Audio & Media</h3>
+            <ul>
+              <li>HTML Audio API</li>
+              <li>Looping MP4 video background</li>
+              <li>Ambient sound layers</li>
+            </ul>
+          </div>
+
+          <div>
+            <ul>
+              <li style="opacity: 0"></li>
+              <li>Canva</li>
+              <li>Pixabay</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Key Features -->
+      <div class="project-section">
+        <h2>Key Features</h2>
+        <ul>
+          <li>Type a thought and watch each word float up from the fire and fade into the sky.</li>
+          <li>Looping campfire video background for an immersive atmosphere.</li>
+          <li>Layered ambient audio (campfire, and additional sounds) each with individual volume controls.</li>
+          <li>Toggle panel to show and hide audio controls and instructions cleanly.</li>
+          <li>Words scatter wide across the screen with randomised drift, rotation, and timing.</li>
+          <li>Fully frontend with no login, no data stored, and no server required.</li>
+        </ul>
+      </div>
+
+      <!-- Challenges -->
+      <div class="project-section">
+        <h2>Challenges & Solutions</h2>
+
+        <h3>Animating words individually</h3>
+
+        <p>
+          The core interaction of splitting a sentence into words and animating each one separately required a custom animation system. Claude assisted with building a Web Animations API to give each word its own keyframe timeline, with randomised duration, drift, rotation, and spread so no two words move the same way.
+        </p>
+
+        <h3>Keeping it purely frontend</h3>
+
+        <p>
+          Choosing to use no frameworks and no backend meant solving everything with HTML, CSS, and JavaScript. This constraint pushed me to write cleaner, more intentional code and gave me a much deeper understanding of core browser technologies and behaviours.
+        </p>
+
+        <h3> Reconsidering user-provided music </h3>
+        <p>
+            Initially, I planned to allow users to add their own Spotify or YouTube music through links. During development, I realised this introduced several limitations, including no volume control, browser sandboxing constraints, and inconsistent user experience across platforms. Rather than adding a feature with limited functionality, I pivoted to a curated library of ambient sounds that users could mix, control independently, and adjust in real time.
+        </p>
+        </div>
+
+      <!-- What I Learned -->
+      <div class="project-section">
+        <h2>What I Learned</h2>
+
+        <ul>
+          <li>How to use the Web Animations API to create complex, staggered keyframe animations.</li>
+          <li>The limitations of embedded third-party iframes and how sandboxing works in browsers.</li>
+          <li>How to layer and control multiple HTML audio streams independently.</li>
+          <li>The value of working without a framework — understanding the DOM, event listeners, and the browser directly</li>
+          <li>How small details like timing, easing, and spread dramatically change how an animation feels.</li>
+          <li>That constraints (solo, one week, no backend) often produce more focused, intentional work.</li>
+        </ul>
+      </div>
+
+      <!-- Live Demo -->
+      <div class="project-section project-links">
+        <a
+          href="https://campfirecounsellor.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="project-btn"
+        >
+          View Project
+        </a>
+      </div>
+
+    </section>
+  </body>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-socials">
+      <h4>Find me on</h4>
+      <a href="https://github.com/smijis" aria-label="GitHub">
+        <img class="socials-icon" src="./img/github.png" alt="GitHub" />
+      </a>
+      <a href="https://www.linkedin.com/in/selina-shin/" aria-label="LinkedIn">
+        <img class="socials-icon" src="./img/linkedin.png" alt="LinkedIn" />
+      </a>
+    </div>
+    <p class="footer-copy">© Selina Shin 2026</p>
+  </footer>
+
+</html>
